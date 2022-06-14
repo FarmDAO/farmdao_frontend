@@ -1,10 +1,19 @@
 import React, { Component }  from 'react';
+//debut test//
+import { useState } from 'react';
+import axios from 'axios';
+
+
+
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=51.5073219&lon=-0.1276474&appid=b68437b6b6a277a11ffe863e03a6552a`
+
 
 export const userColumns = [
   { field: "id", headerName: "ID", width: 70 },
+
   {
-    field: "user",
-    headerName: "User",
+    field: "borrower",
+    headerName: "Borrower",
     width: 230,
     renderCell: (params) => {
       return (
@@ -16,16 +25,19 @@ export const userColumns = [
     },
   },
   {
-    field: "email",
-    headerName: "Email",
-    width: 230,
+    field: "amount",
+    headerName: "Amount",
+    width: 150,
   },
 
   {
-    field: "age",
-    headerName: "Age",
-    width: 100,
+    field: "email",
+    headerName: "Interest Rate",
+    width: 150,
   },
+  {field : "tenor",
+  headerName : "Tenor",
+  width : 100},
   {
     field: "status",
     headerName: "Status",
@@ -44,9 +56,12 @@ export const userColumns = [
 export const userRows = [
   {
     id: 1,
-    username: "Snow",
+    username: "AfricaFruits",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    status: "active",
+    amount: "1 000 000",
+    intRate: "10 %",
+    status: "funding",
+    tenor : "12 months",
     email: "1snow@gmail.com",
     age: 35,
   },
@@ -55,7 +70,7 @@ export const userRows = [
     username: "Jamie Lannister",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     email: "2snow@gmail.com",
-    status: "passive",
+    status: "funded",
     age: 42,
   },
   {
@@ -63,7 +78,7 @@ export const userRows = [
     username: "Lannister",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     email: "3snow@gmail.com",
-    status: "pending",
+    status: "repayed",
     age: 45,
   },
   {
@@ -71,7 +86,7 @@ export const userRows = [
     username: "Stark",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     email: "4snow@gmail.com",
-    status: "active",
+    status: "funded",
     age: 16,
   },
   {
@@ -79,7 +94,7 @@ export const userRows = [
     username: "Targaryen",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     email: "5snow@gmail.com",
-    status: "passive",
+    status: "funding",
     age: 22,
   },
   {
@@ -87,7 +102,7 @@ export const userRows = [
     username: "Melisandre",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     email: "6snow@gmail.com",
-    status: "active",
+    status: "repayed",
     age: 15,
   },
   {
@@ -95,7 +110,7 @@ export const userRows = [
     username: "Clifford",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     email: "7snow@gmail.com",
-    status: "passive",
+    status: "funded",
     age: 44,
   },
   {
@@ -103,7 +118,7 @@ export const userRows = [
     username: "Frances",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     email: "8snow@gmail.com",
-    status: "active",
+    status: "repayed",
     age: 36,
   },
   {
@@ -111,15 +126,8 @@ export const userRows = [
     username: "Roxie",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     email: "snow@gmail.com",
-    status: "pending",
+    status: "funding",
     age: 65,
   },
-  {
-    id: 10,
-    username: "Roxie",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "snow@gmail.com",
-    status: "active",
-    age: 65,
-  },
+ 
 ];

@@ -47,7 +47,7 @@ const Single = () => {
               </div>
             </div>
           </div>
-           */}
+           
         </div>
         <div className="bottom">
         <h1 className="title">Last Transactions</h1>
