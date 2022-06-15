@@ -1,17 +1,28 @@
 import "./landing.scss"
 import {Link} from "react-router-dom";
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
+import { useState } from "react";
+import Navbarlanding from "../../components/navbarLanding/index.js";
+import SideBarlanding from "../../components/sidebarLanding";
+import HeroSection from "../../components/HeroSection";
+import InfoSection from "../../components/InfoSection";
 
 
 const Landing = () => {
-    return (
-        <div className="landing">
-            This is our landing plage
+const [isOpen, setIsOpen] = useState(false);
 
-            <Link to="/dashboard" style={{textDecoration:"none"}}>
-                        <span>Dashboard</span>
-            </Link>
-        </div>
+const toggle = () => {
+    setIsOpen(!isOpen);
+};
+
+    return (
+
+    <>
+        <SideBarlanding isOpen={isOpen} toggle={toggle} />
+        <Navbarlanding toggle={toggle} />
+        <HeroSection />
+        <InfoSection />
+    </>
     )
 }
 

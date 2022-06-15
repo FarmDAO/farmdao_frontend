@@ -1,5 +1,6 @@
 import Home from "./pages/home/Home.jsx";
 import React, { Component }  from 'react';
+import "./App.css";
 
 import Login from "./pages/login/Login.jsx";
 import List from "./pages/list/List.jsx";
