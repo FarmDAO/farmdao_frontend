@@ -10,20 +10,20 @@ const SideBarlanding = ({isOpen, toggle}) => {
         <SidebarWrapper>
             <SidebarMenu>
                 <SidebarLink to="about" onClick={toggle}>
-                    About
+                    Backers
                 </SidebarLink>
                 <SidebarLink to="discover" onClick={toggle}>
-                    Discover
+                    Borrowers
                 </SidebarLink>
                 <SidebarLink to="services" onClick={toggle}>
-                    Serivces
+                    How it works
                 </SidebarLink>
                 <SidebarLink to="signup" onClick={toggle}>
                     Sign up
                 </SidebarLink>
             </SidebarMenu>
             <SideBtnWrap>
-                <SidebarRoute to="/dashboard">My App</SidebarRoute>
+                <SidebarRoute to="/dashboard">Start Now</SidebarRoute>
             </SideBtnWrap>
         </SidebarWrapper>
     </SidebarContainer>

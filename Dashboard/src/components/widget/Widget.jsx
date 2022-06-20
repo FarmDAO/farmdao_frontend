@@ -20,9 +20,9 @@ const Widget = ({ type }) => {
 switch(type){
     case "user":
         data={
-            title:"USERS",
+            title:"LATEST TRANSACTIONS",
             isMoney: false,
-            link: "See all users",
+            link: "See all transactions",
             icon: <PersonIcon className="icon" style={{color : "crimson", backgroundColor: "rgba(217, 39, 39, 0.39)" }}/>,
             
         };

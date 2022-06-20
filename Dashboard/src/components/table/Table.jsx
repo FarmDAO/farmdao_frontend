@@ -8,37 +8,44 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import useFetch2 from "../../hooks/useFetch2";
 
 
 const List = () => {
 
+  const {data, loading, error} = useFetch2("https://api.mocki.io/v2/046cd182/FarmDaoData");
+
+  if (loading) return <h1>Loading...</h1>;
+
+  if  (error) console.log(error);
+
     const rows = [
         {
-            id:1143155,
-            product: "Acer Nitro 5",
+            id:1,
+            product: "Elsa Zilberstein",
             img: "",
-            customer : "John Smith",
-            date :"1 March",
-            amount: 785,
-            status : "Approved"
+            customer : "100000 $",
+            date :"5 %",
+            amount: 1,
+            status : "posted"
         },
         {
-            id:1143155,
-            product: "Acer Nitro 5",
+            id:2,
+            product: "John Ferris",
             img: "",
-            customer : "John Smith",
-            date :"1 March",
-            amount: 785,
-            status : "Refused"
+            customer : "300000 $",
+            date :"7.5 %",
+            amount: 1,
+            status : "approved"
         },
         {
-            id:1143155,
-            product: "Acer Nitro 5",
+            id:3,
+            product: "Michael Brown",
             img: "",
-            customer : "John Smith",
-            date :"1 March",
-            amount: 785,
-            status : "Pending"
+            customer : "1200000 $",
+            date :"6.5 %",
+            amount: 2,
+            status : "funding"
         },
     ]
     return <TableContainer component={Paper} className="table">
@@ -46,10 +53,10 @@ const List = () => {
       <TableHead>
         <TableRow>
           <TableCell className="tableCell">Traking ID</TableCell>
-          <TableCell className="tableCell">Product</TableCell>
-          <TableCell className="tableCell">Customer</TableCell>
-          <TableCell className="tableCell">Date</TableCell>
+          <TableCell className="tableCell">Borrower</TableCell>
           <TableCell className="tableCell">Amount</TableCell>
+          <TableCell className="tableCell">Interest Rate</TableCell>
+          <TableCell className="tableCell">Tenor</TableCell>
           <TableCell className="tableCell">Status</TableCell>
         </TableRow>
       </TableHead>

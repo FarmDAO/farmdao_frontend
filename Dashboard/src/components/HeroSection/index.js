@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Video from "../../videos/video.mp4"
 import { Button } from '../ButtonElement';
 import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroBtnWrapper, ArrowForward, ArrowRight, HeroP} from "./HeroElements";
+import { NavBtn,NavBtnLink } from '../navbarLanding/NavbarElement';
 
 const HeroSection = () => {
     const [hover, setHover] = useState(false)
@@ -15,14 +16,16 @@ const HeroSection = () => {
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
     </HeroBg>
     <HeroContent>
-        <HeroH1> Virtual Banking made east</HeroH1>
+        <HeroH1> FarmDAO: Onchain loans for Agri processors</HeroH1>
         <HeroP>
-            Sign up for a new account today 
+        FarmDAO protocol allows ICP holders to extend credit to Agri processors in developing markets.
+
         </HeroP>
         <HeroBtnWrapper>
-            <Button to="/dashboard" onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark="true">
-                Get started {hover ? <ArrowForward /> : <ArrowRight />}
-            </Button>
+           
+            <NavBtn>
+                    <NavBtnLink to="/dashboard">Get started now</NavBtnLink>
+                </NavBtn>
         </HeroBtnWrapper>
     </HeroContent>
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link as LinkR} from "react-router-dom"
 
 export const InfoContainer = styled.div`
   color: #fff;
@@ -101,35 +100,3 @@ export const Img = styled.img`
   margin-left: 10px;
   padding-right: 0;
 `;
-
-export const NavBtnInfo = styled.nav` 
-display: flex;
-align-items: center;
-margin-left: 120px;
-
-@media screen and (max-width: 768px) {
-    display: none;
-}
-`;
-
-export const NavBtnLinkInfo= styled(LinkR)`
-border-radius: 50px;
-background: #01bf71;
-white-space: nowrap;
-padding: 10px 22px;
-color: #010606;
-font-size: 16px;
-outline:none;
-border:none;
-cursor:pointer;
-transition: all 0.2s ease-in-out;
-text-decoration: none;
-
-
-&:hover {
-    transition: all 0.2s ease-in-out;
-    background : #00ff2a;
-    color: #010606
-};
-
-`

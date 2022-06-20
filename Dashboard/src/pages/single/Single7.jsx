@@ -9,10 +9,8 @@ import List from "../../components/table/Table";
 // import Chart from "../../components/chart/Chart";
 import useFetch from '../../hooks/useFetch';
 import useFetch2 from '../../hooks/useFetch2';
-import ProgressBar from '../../components/progressBar/ProgressBar';
-import { NavBtnSingle,NavBtnLinkSingle } from '../../components/navbarLanding/NavbarElement';
 
-const Single = () => {
+const Single7 = () => {
 
   // const {data,loading,error} = useFetch("https://api.mocki.io/v2/046cd182")
   // console.log(data[0].username)
@@ -46,45 +44,43 @@ const Single = () => {
                 className="itemImg"
               />
               <div className="details">
-                <h1 className="itemTitle">{data?.response[0].username} </h1>
+                <h1 className="itemTitle">{data?.response[7].username} </h1>
                 <div className="detailItem">
                   <span className="itemKey">Website:</span>
-                  <span className="itemValue">{data?.response[0].website}</span>
+                  <span className="itemValue">{data?.response[7].website}</span>
                 </div>
                 <div className="detailItem">
                   <span className="itemKey">Due Diligence Folder:</span>
-                  <span className="itemValue">{data?.response[0].DueDiligence}</span>
+                  <span className="itemValue">{data?.response[7].DueDiligence}</span>
                 </div>
                 <div className="detailItem">
                   <span className="itemKey">Loan Amount:</span>
                   <span className="itemValue">
-                  {data?.response[0].funded_amount}
+                  {data?.response[7].funded_amount}
                   </span>
                 </div>
                 <div className="detailItem">
                   <span className="itemKey">Interest rate:</span>
-                  <span className="itemValue">{data?.response[0].InterestRate}</span>
+                  <span className="itemValue">{data?.response[7].InterestRate}</span>
                 </div>
                 <div className="detailItem">
                   <span className="itemKey">Tenor:</span>
-                  <span className="itemValue">{data?.response[0].Tenor}</span>
+                  <span className="itemValue">{data?.response[7].Tenor}</span>
                 </div>
                 <div className="detailItem">
                   <span className="itemKey">Funded Amount :</span>
-                  <span className="itemValue">{data?.response[0].funded_amount}</span>
+                  <span className="itemValue">{data?.response[7].funded_amount}</span>
                 </div>
-                
-                <button className="button-71">Fund now</button>
+               
               </div>
-              
             </div>
-            
           </div>
            
         </div>
-
-        
-       
+        <div className="bottom">
+        <h1 className="title">Last Transactions</h1>
+          <List/>
+        </div>
         {/* test */}
         <div className="charts"></div>
         {/* <Featured /> */}
@@ -96,4 +92,4 @@ const Single = () => {
   );
 };
 
-export default Single;
+export default Single7;

@@ -8,27 +8,25 @@ const Navbarlanding = ({toggle}) => {
         <Nav>
             <NavbarContainer>
                 <NavLogo to="/">
-                    dollar
+                    FarmDAO
                 </NavLogo> 
                 <MobileIcon onClick={toggle}>
                     <FaBars />
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to="about">About</NavLinks>
+                        <NavLinks to="about">Backers</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to="discover">Discover</NavLinks>
+                        <NavLinks to="discover">Borrowers</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to="services">Services</NavLinks>
+                        <NavLinks to="services">How it works</NavLinks>
                     </NavItem>
-                    <NavItem>
-                        <NavLinks to="signup">Signup</NavLinks>
-                    </NavItem>
+                    
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to="/dashboard">My App</NavBtnLink>
+                    <NavBtnLink to="/signin">Sign In</NavBtnLink>
                 </NavBtn>
             </NavbarContainer>
         </Nav>
